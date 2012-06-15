@@ -58,8 +58,8 @@ class IdealTechRedisExtension extends Extension
      */
     protected function configureClients(array $config, ContainerBuilder $container)
     {
-        if (!class_exists('\Predis\Client')) {
-            throw new RuntimeException('RedisBundle: Predis client class cannot be found (missing dependency ?).');
+        if (!class_exists('Redis')) {
+            throw new RuntimeException('RedisBundle: Redis class cannot be found (missing dependency ?).');
         }
 
         if (!count($clients = $config['clients'])) {
@@ -68,12 +68,9 @@ class IdealTechRedisExtension extends Extension
         }
 
         foreach ($clients as $name => $parameters) {
-            if (!count($servers = $parameters['servers'])) {
-                continue;
-            }
-
-            $definition = new Definition('%ideal_tech_redis.client.class%', $parameters['servers']);
+            $definition = new Definition('%ideal_tech_redis.client.class%');
             $definition->setPublic(true);
+            $definition->addMethodCall('connect', $parameters);
             $container->setDefinition(sprintf('ideal_tech_redis.clients.%s', $name), $definition);
         }
 

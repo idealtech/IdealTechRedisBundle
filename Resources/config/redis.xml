@@ -6,7 +6,7 @@
 
     <parameters>
         <parameter key="ideal_tech_redis.client_manager.class">IdealTech\RedisBundle\Redis\ClientManager</parameter>
-        <parameter key="ideal_tech_redis.client.class">Predis\Client</parameter>
+        <parameter key="ideal_tech_redis.client.class">Redis</parameter>
     </parameters>
 
     <services>
