@@ -3,8 +3,5 @@
     "type": "symfony-bundle",
     "description": "Symfony Bundle for Redis, the key/value database.",
     "keywords": [ "Redis", "redis-server" ],
-    "require": {
-        "predis/predis": "0.7.*"
-    },
     "target-dir": "IdealTech/RedisBundle"
 }
