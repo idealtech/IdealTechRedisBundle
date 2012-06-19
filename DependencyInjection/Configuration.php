@@ -45,7 +45,6 @@ class Configuration implements ConfigurationInterface
                     ->defaultValue(array())
                     ->useAttributeAsKey('name')
                     ->prototype('array')
-                        ->addDefaultsIfNotSet()
                         ->children()
                             ->scalarNode('host')
                                 ->cannotBeEmpty()
