@@ -50,7 +50,6 @@ class Configuration implements ConfigurationInterface
                                 ->defaultValue('localhost')
                             ->end()
                             ->scalarNode('port')
-                                ->cannotBeEmpty()
                                 ->defaultValue('6379')
                             ->end()
                         ->end()
