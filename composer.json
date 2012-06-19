@@ -6,5 +6,5 @@
     "target-dir": "IdealTech/RedisBundle",
     "autoload":     {
         "psr-0": { "IdealTech\\RedisBundle": "" }
-    },
+    }
 }
