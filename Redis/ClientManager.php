@@ -54,6 +54,16 @@ class ClientManager extends ContainerAware implements ClientManagerInterface
     }
 
     /**
+     * Returns the client options
+     *
+     * @return array options
+     */
+    public function getOptions()
+    {
+        return $this->options;
+    }
+
+    /**
      * Returns the default client
      *
      * @return Predis\Client The default client
