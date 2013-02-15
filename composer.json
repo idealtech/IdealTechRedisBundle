@@ -1,10 +1,18 @@
+
 {
-    "name": "idealtech/redis-bundle",
-    "type": "symfony-bundle",
-    "description": "Symfony Bundle for Redis, the key/value database.",
-    "keywords": [ "Redis", "redis-server" ],
-    "target-dir": "IdealTech/RedisBundle",
+    "name":         "idealtech/redis-bundle",
+    "description":  "The Ideal Tech Redis Bundle for Symfony 2.0.x",
+    "type":         "symfony-bundle",
+    "license":      "MIT",
+    "authors":      [
+        {
+            "name":     "Ideal Technology",
+            "homepage": "http://idealtechnology.net"
+        }
+    ],
     "autoload":     {
         "psr-0": { "IdealTech\\RedisBundle": "" }
-    }
+    },
+    "target-dir": "IdealTech/RedisBundle",
+    "minimum-stability": "dev"
 }
